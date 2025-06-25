@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(26, 10%, 10%);
+  --foreground: hsl(0, 0%, 99%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(248, 6%, 75%);
+  --popover: hsl(26, 10%, 10%);
+  --popover-foreground: hsl(0, 0%, 99%);
+  --card: hsl(26, 10%, 10%);
+  --card-foreground: hsl(0, 0%, 99%);
+  --border: hsl(45, 15%, 25%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(345, 70%, 32%);
+  --primary-foreground: hsl(0, 0%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 99%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 99%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 99%);
+  --ring: hsl(45, 35%, 52%);
+  --radius: 0.5rem;
+  
+  /* Custom luxury colors */
+  --luxury-red: hsl(345, 70%, 32%);
+  --premium-gold: hsl(45, 69%, 55%);
+  --pearl-white: hsl(0, 0%, 99%);
+  --graphite-gray: hsl(0, 0%, 17%);
+  --platinum-gray: hsl(0, 0%, 97%);
+  --diamond-black: hsl(0, 0%, 10%);
+}
+
+.dark {
+  --background: hsl(26, 10%, 10%);
+  --foreground: hsl(0, 0%, 99%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(248, 6%, 75%);
+  --popover: hsl(26, 10%, 10%);
+  --popover-foreground: hsl(0, 0%, 99%);
+  --card: hsl(26, 10%, 10%);
+  --card-foreground: hsl(0, 0%, 99%);
+  --border: hsl(45, 15%, 25%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(345, 70%, 32%);
+  --primary-foreground: hsl(0, 0%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 99%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 99%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 99%);
+  --ring: hsl(45, 35%, 52%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased;
+    background: linear-gradient(135deg, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 17%) 50%, hsl(345, 70%, 32%) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    background: rgba(254, 254, 254, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .luxury-gradient {
+    background: linear-gradient(135deg, 
+      hsl(0, 0%, 10%) 0%, 
+      hsl(0, 0%, 17%) 50%, 
+      hsl(345, 70%, 32%) 100%);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(135deg, 
+      hsla(0, 0%, 10%, 0.8) 0%, 
+      hsla(0, 0%, 17%, 0.6) 50%, 
+      hsla(345, 70%, 32%, 0.4) 100%);
+  }
+
+  .marble-texture {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsla(45, 69%, 55%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(345, 70%, 32%, 0.1) 0%, transparent 50%);
+  }
+
+  .btn-3d {
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-3d:hover::before {
+    left: 100%;
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-12px) rotateX(20deg) rotateY(-5deg) scale(1.05);
+    box-shadow: 
+      0 25px 50px hsla(45, 69%, 55%, 0.4),
+      0 15px 30px hsla(345, 70%, 32%, 0.3),
+      0 0 0 1px hsla(45, 69%, 55%, 0.6),
+      inset 0 2px 0 hsla(0, 0%, 100%, 0.3),
+      inset 0 -2px 0 hsla(0, 0%, 0%, 0.2);
+  }
+
+  .btn-3d:active {
+    transform: translateY(-4px) rotateX(10deg) rotateY(-2deg) scale(1.02);
+    transition: all 0.1s ease-out;
+  }
+
+  .property-card {
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      hsla(45, 69%, 55%, 0.1) 0%, 
+      transparent 50%, 
+      hsla(345, 70%, 32%, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+
+  .property-card:hover::before {
+    opacity: 1;
+  }
+
+  .property-card:hover {
+    transform: translateY(-25px) rotateX(5deg) rotateY(-2deg) scale(1.03);
+    box-shadow: 
+      0 35px 70px hsla(0, 0%, 0%, 0.5),
+      0 20px 40px hsla(345, 70%, 32%, 0.3),
+      0 0 0 1px hsla(45, 69%, 55%, 0.4),
+      inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+  }
+
+  .property-card .property-image {
+    transition: all 0.6s ease;
+  }
+
+  .property-card:hover .property-image {
+    transform: scale(1.1) rotateZ(1deg);
+  }
+
+  .shine-effect {
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsla(45, 69%, 55%, 0.4), 
+      transparent);
+    background-size: 200% 100%;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+    25% { transform: translateY(-10px) rotateZ(1deg); }
+    50% { transform: translateY(-20px) rotateZ(0deg); }
+    75% { transform: translateY(-10px) rotateZ(-1deg); }
+  }
+
+  @keyframes glow {
+    0% { 
+      box-shadow: 0 0 20px hsla(45, 69%, 55%, 0.5);
+      filter: brightness(1);
+    }
+    100% { 
+      box-shadow: 0 0 40px hsla(45, 69%, 55%, 0.8);
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes parallax {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes luxuryPulse {
+    0%, 100% { 
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% { 
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes elegantSway {
+    0%, 100% { transform: translateX(0) rotateZ(0deg); }
+    25% { transform: translateX(5px) rotateZ(0.5deg); }
+    50% { transform: translateX(0) rotateZ(0deg); }
+    75% { transform: translateX(-5px) rotateZ(-0.5deg); }
+  }
+
+  @keyframes goldShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-parallax {
+    animation: parallax 20s linear infinite;
+  }
+
+  .animate-luxury-pulse {
+    animation: luxuryPulse 3s ease-in-out infinite;
+  }
+
+  .animate-elegant-sway {
+    animation: elegantSway 4s ease-in-out infinite;
+  }
+
+  .animate-gold-shimmer {
+    animation: goldShimmer 2s linear infinite;
+  }
+
+  .luxury-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .luxury-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .text-luxury-red {
+    color: hsl(345, 70%, 32%);
+  }
+
+  .text-premium-gold {
+    color: hsl(45, 69%, 55%);
+  }
+
+  .text-pearl-white {
+    color: hsl(0, 0%, 99%);
+  }
+
+  .text-graphite-gray {
+    color: hsl(0, 0%, 17%);
+  }
+
+  .text-platinum-gray {
+    color: hsl(0, 0%, 75%);
+  }
+
+  .text-diamond-black {
+    color: hsl(0, 0%, 10%);
+  }
+
+  .bg-luxury-red {
+    background-color: hsl(345, 70%, 32%);
+  }
+
+  .bg-premium-gold {
+    background-color: hsl(45, 69%, 55%);
+  }
+
+  .bg-pearl-white {
+    background-color: hsl(0, 0%, 99%);
+  }
+
+  .bg-graphite-gray {
+    background-color: hsl(0, 0%, 17%);
+  }
+
+  .bg-platinum-gray {
+    background-color: hsl(0, 0%, 97%);
+  }
+
+  .bg-diamond-black {
+    background-color: hsl(0, 0%, 10%);
+  }
+
+  .border-luxury-red {
+    border-color: hsl(345, 70%, 32%);
+  }
+
+  .border-premium-gold {
+    border-color: hsl(45, 69%, 55%);
+  }
+
+  .hover\:bg-premium-gold:hover {
+    background-color: hsl(45, 69%, 55%);
+  }
+
+  .hover\:text-diamond-black:hover {
+    color: hsl(0, 0%, 10%);
+  }
+
+  .hover\:text-premium-gold:hover {
+    color: hsl(45, 69%, 55%);
+  }
+
+  @media (max-width: 768px) {
+    .btn-3d:hover {
+      transform: translateY(-4px);
+    }
+    .property-card:hover {
+      transform: translateY(-10px) scale(1.01);
+    }
+  }
+}

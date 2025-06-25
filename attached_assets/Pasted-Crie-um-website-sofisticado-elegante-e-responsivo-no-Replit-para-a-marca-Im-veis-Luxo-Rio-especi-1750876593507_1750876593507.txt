@@ -1,0 +1,57 @@
+Crie um website sofisticado, elegante e responsivo no Replit para a marca "Imóveis Luxo Rio", especializada em conectar clientes a imóveis de luxo no Rio de Janeiro. O design deve seguir rigorosamente a identidade visual já definida, agora com melhorias visuais para torná-lo mais chamativo e sofisticado:
+
+**Identidade Visual:**
+
+* Logo estilo selo octogonal vermelho borgonha (#8B1538) com detalhes em branco pérola (#FEFEFE) (Já pronta e segue imagem).
+* Paleta principal: Vermelho Luxo (#8B1538), Dourado Premium (#D4AF37), Branco Pérola (#FEFEFE), Cinza Grafite (#2C2C2C), Cinza Platina (#F8F8F8), Preto Diamante (#1A1A1A).
+* Tipografia: Títulos em Playfair Display, subtítulos em Montserrat e corpo em Inter.
+* Elementos decorativos: Texturas de mármore, linhas douradas, ícones minimalistas e animações elegantes.
+
+**Ajustes adicionais no design:**
+
+* Cor do fundo das páginas em tons escuros complementares à paleta principal (por exemplo, Cinza Grafite #2C2C2C ou Preto Diamante #1A1A1A), com seções destacadas em gradientes suaves do vermelho luxo (#8B1538).
+* Incluir animações avançadas em cada seção do site: transições suaves, carregamento elegante dos conteúdos e efeitos de entrada chamativos ao rolar a página.
+* Adicionar efeitos parallax e hover com detalhes metálicos dourados ou texturas de mármore para intensificar a percepção de luxo e sofisticação.
+
+**Estrutura básica das páginas:**
+
+1. Landing Page impactante com apresentação de imóveis destacados e chamadas para ação claras.
+2. Galeria avançada de imóveis com filtros inteligentes (preço, localização, tipo de imóvel).
+3. Página individual detalhada por imóvel (fotos, descrição, funcionalidades IA).
+4. Página institucional sobre a empresa (missão, valores, equipe).
+5. Página com formulário de contato elegante.
+
+**Funcionalidades avançadas utilizando IA:**
+
+1. **Decoração Personalizada IA:**
+
+   * Clientes podem escolher apenas fotos pré-selecionadas da galeria do imóvel e personalizar estilos decorativos instantaneamente via IA (minimalista, clássico, moderno, industrial).
+
+2. **Tour Guiado com Áudio IA:**
+
+   * Gerar automaticamente áudios criativos e imersivos guiando o cliente por cada ambiente do imóvel.
+
+3. **Chatbot Inteligente:**
+
+   * Atendimento automático e qualificação rápida de leads, respondendo dúvidas frequentes e encaminhando interessados aos corretores.
+
+4. **Recomendação Personalizada IA:**
+
+   * Sistema inteligente que analisa comportamento e preferências do cliente para sugerir imóveis mais relevantes automaticamente.
+
+5. **CRM Inteligente Integrado:**
+
+   * Centraliza informações dos contatos, analisa padrões de interesse e sugere ações estratégicas aos corretores.
+
+6. **Agendamento Inteligente Integrado ao Google Calendar:**
+
+   * Formulário intuitivo com calendário interativo sincronizado com Google Calendar.
+   * Clientes devem preencher obrigatoriamente: Nome, Telefone, E-mail e opcionalmente WhatsApp.
+   * Envio automático da solicitação ao corretor responsável, com possibilidade de confirmação ou ajuste pelo corretor.
+
+**Integrações obrigatórias:**
+
+* Redes sociais (Instagram, Facebook, TikTok, YouTube).
+* Google Analytics (rastreamento detalhado de visitas).
+
+Esse site deve combinar tecnologia avançada, sofisticação visual e animações impactantes, proporcionando uma experiência única ao cliente e transmitindo claramente exclusividade, inovação e luxo.
