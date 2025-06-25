@@ -22,19 +22,18 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-80"
         >
-          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9a1c1e8&profile_id=165&oauth2_token_id=57447761" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source src="/attached_assets/Create_a_visually_202506252236_1750887401969.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 hero-overlay" />
         
         {/* Luxury Overlay Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-15">
           <div className="w-full h-full" style={{
-            backgroundImage: `radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.3) 0%, transparent 50%),
-                             radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.3) 0%, transparent 50%),
-                             radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.2) 0%, transparent 50%)`
+            backgroundImage: `radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.4) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.4) 0%, transparent 50%),
+                             radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.3) 0%, transparent 50%)`
           }} />
         </div>
       </div>

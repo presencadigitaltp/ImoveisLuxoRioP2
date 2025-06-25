@@ -100,9 +100,9 @@
 
   .hero-overlay {
     background: linear-gradient(135deg, 
-      hsla(0, 0%, 10%, 0.8) 0%, 
-      hsla(0, 0%, 17%, 0.6) 50%, 
-      hsla(345, 70%, 32%, 0.4) 100%);
+      hsla(0, 0%, 10%, 0.7) 0%, 
+      hsla(0, 0%, 17%, 0.5) 50%, 
+      hsla(345, 70%, 32%, 0.3) 100%);
   }
 
   .marble-texture {
