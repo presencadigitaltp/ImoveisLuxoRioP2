@@ -1,0 +1,61 @@
+Crie um website sofisticado, elegante e responsivo no Replit para a marca "Imóveis Luxo Rio", especializada em conectar clientes a imóveis de luxo no Rio de Janeiro. O design deve seguir rigorosamente a identidade visual já definida:
+
+Identidade Visual:
+
+Logo estilo selo octogonal vermelho borgonha (#8B1538) com detalhes em branco pérola (#FEFEFE) (Já pronta e segue imagem)
+
+Paleta principal: Vermelho Luxo (#8B1538), Dourado Premium (#D4AF37), Branco Pérola (#FEFEFE), Cinza Grafite (#2C2C2C), Cinza Platina (#F8F8F8), Preto Diamante (#1A1A1A).
+
+Tipografia: Títulos em Playfair Display, subtítulos em Montserrat e corpo em Inter.
+
+Elementos decorativos: Texturas de mármore, linhas douradas, ícones minimalistas e animações elegantes.
+
+Estrutura básica das páginas:
+
+Landing Page impactante com apresentação de imóveis destacados e chamadas para ação claras.
+
+Galeria avançada de imóveis com filtros inteligentes (preço, localização, tipo de imóvel).
+
+Página individual detalhada por imóvel (fotos, descrição, funcionalidades IA).
+
+Página institucional sobre a empresa (missão, valores, equipe).
+
+Página com formulário de contato elegante.
+
+Funcionalidades avançadas utilizando IA:
+
+Decoração Personalizada IA:
+
+Clientes podem escolher apenas fotos pré-selecionadas da galeria do imóvel e personalizar estilos decorativos instantaneamente via IA (minimalista, clássico, moderno, industrial).
+
+Tour Guiado com Áudio IA:
+
+Gerar automaticamente áudios criativos e imersivos guiando o cliente por cada ambiente do imóvel.
+
+Chatbot Inteligente:
+
+Atendimento automático e qualificação rápida de leads, respondendo dúvidas frequentes e encaminhando interessados aos corretores.
+
+Recomendação Personalizada IA:
+
+Sistema inteligente que analisa comportamento e preferências do cliente para sugerir imóveis mais relevantes automaticamente.
+
+CRM Inteligente Integrado:
+
+Centraliza informações dos contatos, analisa padrões de interesse e sugere ações estratégicas aos corretores.
+
+Agendamento Inteligente Integrado ao Google Calendar:
+
+Formulário intuitivo com calendário interativo sincronizado com Google Calendar.
+
+Clientes devem preencher obrigatoriamente: Nome, Telefone, E-mail e opcionalmente WhatsApp.
+
+Envio automático da solicitação ao corretor responsável, com possibilidade de confirmação ou ajuste pelo corretor.
+
+Integrações obrigatórias:
+
+Redes sociais (Instagram, Facebook, TikTok, YouTube).
+
+Google Analytics (rastreamento detalhado de visitas).
+
+Esse site deve combinar tecnologia avançada e sofisticação visual, oferecendo uma experiência única ao cliente, que transmita exclusividade, inovação e luxo.
