@@ -173,10 +173,10 @@ const Properties = () => {
             initial="hidden"
             animate="visible"
           >
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold text-pearl-white mb-6">
+            <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-pearl-white mb-6">
               Nossos <span className="text-premium-gold">Imóveis</span>
             </h1>
-            <p className="font-montserrat text-xl text-platinum-gray max-w-3xl mx-auto">
+            <p className="font-cormorant text-xl text-platinum-gray max-w-3xl mx-auto">
               Descubra nossa seleção exclusiva de propriedades de luxo no Rio de Janeiro
             </p>
           </motion.div>
@@ -194,13 +194,13 @@ const Properties = () => {
           >
             <Card className="glass-morphism bg-transparent border-premium-gold/20 sticky top-24">
               <CardContent className="p-6">
-                <h3 className="font-playfair text-2xl font-bold text-pearl-white mb-6">
+                <h3 className="font-cinzel text-2xl font-bold text-pearl-white mb-6">
                   Filtros
                 </h3>
 
                 {/* Search */}
                 <div className="mb-6">
-                  <label className="block font-montserrat text-sm font-medium text-platinum-gray mb-2">
+                  <label className="block font-poppins text-sm font-medium text-platinum-gray mb-2">
                     Buscar
                   </label>
                   <div className="flex gap-2">
@@ -221,7 +221,7 @@ const Properties = () => {
 
                 {/* Price Range */}
                 <div className="mb-6">
-                  <label className="block font-montserrat text-sm font-medium text-platinum-gray mb-2">
+                  <label className="block font-poppins text-sm font-medium text-platinum-gray mb-2">
                     Faixa de Preço
                   </label>
                   <Slider
