@@ -15,8 +15,8 @@ import { trackEvent } from '@/lib/analytics';
 const Properties = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [priceRange, setPriceRange] = useState([0, 50000000]);
-  const [selectedLocation, setSelectedLocation] = useState('');
-  const [selectedType, setSelectedType] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
   const [sortBy, setSortBy] = useState('price-desc');
 
   // Mock data - in a real app, this would come from an API
@@ -125,8 +125,8 @@ const Properties = () => {
     const matchesSearch = property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          property.location.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesPrice = property.numericPrice >= priceRange[0] && property.numericPrice <= priceRange[1];
-    const matchesLocation = !selectedLocation || property.location.includes(selectedLocation);
-    const matchesType = !selectedType || property.type === selectedType;
+    const matchesLocation = !selectedLocation || selectedLocation === 'all' || property.location.includes(selectedLocation);
+    const matchesType = !selectedType || selectedType === 'all' || property.type === selectedType;
 
     return matchesSearch && matchesPrice && matchesLocation && matchesType;
   });
@@ -245,7 +245,7 @@ const Properties = () => {
                   <label className="block font-montserrat text-sm font-medium text-platinum-gray mb-2">
                     Localização
                   </label>
-                  <Select onValueChange={(value) => {
+                  <Select value={selectedLocation} onValueChange={(value) => {
                     setSelectedLocation(value);
                     handleFilterChange();
                   }}>
@@ -253,7 +253,7 @@ const Properties = () => {
                       <SelectValue placeholder="Selecione o bairro" />
                     </SelectTrigger>
                     <SelectContent className="bg-graphite-gray border-premium-gold/30">
-                      <SelectItem value="" className="text-pearl-white">Todos os bairros</SelectItem>
+                      <SelectItem value="all" className="text-pearl-white">Todos os bairros</SelectItem>
                       {locations.map((location) => (
                         <SelectItem key={location} value={location} className="text-pearl-white">
                           {location}
@@ -268,7 +268,7 @@ const Properties = () => {
                   <label className="block font-montserrat text-sm font-medium text-platinum-gray mb-2">
                     Tipo de Imóvel
                   </label>
-                  <Select onValueChange={(value) => {
+                  <Select value={selectedType} onValueChange={(value) => {
                     setSelectedType(value);
                     handleFilterChange();
                   }}>
@@ -276,7 +276,7 @@ const Properties = () => {
                       <SelectValue placeholder="Selecione o tipo" />
                     </SelectTrigger>
                     <SelectContent className="bg-graphite-gray border-premium-gold/30">
-                      <SelectItem value="" className="text-pearl-white">Todos os tipos</SelectItem>
+                      <SelectItem value="all" className="text-pearl-white">Todos os tipos</SelectItem>
                       {propertyTypes.map((type) => (
                         <SelectItem key={type.value} value={type.value} className="text-pearl-white">
                           {type.label}
@@ -291,8 +291,8 @@ const Properties = () => {
                   onClick={() => {
                     setSearchTerm('');
                     setPriceRange([0, 50000000]);
-                    setSelectedLocation('');
-                    setSelectedType('');
+                    setSelectedLocation('all');
+                    setSelectedType('all');
                     trackEvent('clear_filters', 'properties', 'filters_cleared');
                   }}
                   variant="outline"
